@@ -1,8 +1,8 @@
 import React from 'react'
-
+import Content from './Screens/content';
 const App = () =>  {
   return (
-     <h1>HELLO WORLD</h1>
+     <Content />
   );
 }
 
