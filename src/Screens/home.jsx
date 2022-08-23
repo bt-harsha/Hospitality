@@ -2,9 +2,12 @@ import React from "react";
 import Content from "./content";
 import GridLayout from "../Components/GridLayout";
 import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 const HomePage = () => {
   return (
-    <Content header={"Reviews & Ratings of Best Catering Service Providers Near You"}>
+    <Content
+      header={"Reviews & Ratings of Best Catering Service Providers Near You"}
+    >
       {" "}
       <div className="container-fluid border">
         <h3 className="text-center mt-5 mb-5">Catering Service Categories</h3>
@@ -26,7 +29,13 @@ const HomePage = () => {
                 catering service providers
               </p>
               <h2 className="text-center">
-                <CountUp end={7000} duration={1} suffix="+" enableScrollSpy />
+                <CountUp end={7000} duration={1} suffix="+" enableScrollSpy>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start}>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
               </h2>
             </div>
             <div className="col-md-4 block2">
@@ -36,7 +45,13 @@ const HomePage = () => {
                 companies listed with detailed information
               </p>
               <h2 className="text-center">
-                <CountUp end={3000} duration={1} suffix="+" enableScrollSpy />
+                <CountUp end={3000} duration={1} suffix="+" enableScrollSpy>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start}>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
               </h2>
             </div>
             <div className="col-md-4 block3">
@@ -46,13 +61,13 @@ const HomePage = () => {
                 industry’s trends to help you make an informed decision
               </p>
               <h2 className="text-center">
-                <CountUp
-                  start={0}
-                  end={200}
-                  duration={1}
-                  suffix="+"
-                  enableScrollSpy
-                />
+                <CountUp  end={200} duration={1} suffix="+" enableScrollSpy>
+                  {({ countUpRef, start }) => (
+                    <VisibilitySensor onChange={start}>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  )}
+                </CountUp>
               </h2>
             </div>
           </div>
