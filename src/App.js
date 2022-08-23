@@ -1,8 +1,8 @@
 import React from 'react'
-import Content from './Screens/content';
+import HomePage from './Screens/home';
 const App = () =>  {
   return (
-     <Content />
+     <HomePage />
   );
 }
 

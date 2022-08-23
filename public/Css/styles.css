@@ -77,10 +77,10 @@
     position: absolute;
     background-color: #f9f9f9;
     min-width: 250px;
-    height: 200px;
+    height:auto;
     box-shadow: 2px 2px 2px lightgray;
     padding: 10px 0;
-    overflow-y: auto;
+    overflow-y: scroll;
     color:black;
 
   }
@@ -229,6 +229,33 @@
     border-radius: 50%;
     box-shadow: 2px 2px 2px  2px lightgray;
     background-color: white;
+}
+.readtxt{
+  text-decoration: none;
+}
+.priceContainer{
+  border:1px solid black;
+  text-align: center;
+  border-radius: 20px;
+  
+}
+.card-body p{
+  margin:0;
+} 
+.priceContainer p{
+  margin:0;
+  font-weight: bold;
+}
+.priceContainer span{
+  color:rgb(13, 197, 234)
+}
+.noDatacontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:400px;
+  height:400px;
+
 }
 @media screen and (max-width:766px){
   .block1,.block2{

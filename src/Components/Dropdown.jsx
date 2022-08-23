@@ -1,8 +1,6 @@
-import React,{useState} from 'react'
+import React from 'react'
 
-const Dropdown = ({ city,initial}) => {
-    const [show, setShow] = useState(false);
-    const [index, setIndex] = useState(-1);
+const Dropdown = ({ city,initial,index,setShow,setIndex,show}) => {
     const handleShow = () => {
         setShow(!show);
     }
