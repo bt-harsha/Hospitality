@@ -1,8 +1,8 @@
 import React from 'react'
-
+import HomePage from './Screens/home';
 const App = () =>  {
   return (
-     <h1>HELLO WORLD</h1>
+     <HomePage />
   );
 }
 
